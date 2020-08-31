@@ -17,14 +17,8 @@ Whatever you do, do not change what the function does. Good luck :)
 
 // TODO: Refactor and shorten the function
 
-function describeAge(age) {
-  if (age <= 12) {
-    return "You're a(n) kid";
-  } else if (age >= 13 && age <= 17) {
-    return "You're a(n) teenager";
-  } else if (age >= 18 && age <= 64) {
-    return "You're a(n) adult";
-  } else {
-    return "You're a(n) elderly";
-  }
+
+const describeAge = (age) => {
+  let end = "You're a(n) "
+  return age < 13 ? end + "kid" : age > 12 && age < 18 ? end + "teenager" : age > 17 && age < 65 ? end + "adult" : end + "elderly";
 }
